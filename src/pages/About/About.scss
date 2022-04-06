@@ -1,0 +1,58 @@
+@import '../../assets/scss/mixin.scss';
+.about {
+    display: flex;
+    flex-direction: row;
+
+    .about-inner {
+        background-color: white;
+        box-shadow: 0 1px 5px #a1a1a1;
+
+        @include Responsive(M){
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .about-body {
+            padding: 40px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(121, 121, 121);
+            border-bottom: 1px solid #dbdbdb;
+            line-height: 20px;
+        }
+        .about-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+
+            @include Responsive(XS){
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+            }
+            .about-button {
+                width: 200px;
+                padding: 10px 40px;
+                margin: 20px 10px;
+                text-transform: uppercase;
+                color: white;
+                background-color: #099c5f;
+                border: none;
+                opacity: 0.8;
+                cursor: pointer;
+                box-shadow: 0 2px 5px #a1a1a1;
+                transition: .3s;
+
+                @include Responsive(XS){
+                    margin: 10px;
+                }
+                &:hover {
+                    opacity: 1;
+                    box-shadow: 0 2px 8px #747474;
+                }
+            }
+        }
+    }
+}

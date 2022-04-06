@@ -1,0 +1,17 @@
+.header {
+    background-image: url("../../../assets/images/back1.jpg");
+    background-position-y: top right;
+    background-size: cover;
+    height: 370px;
+    width: 100%;
+    z-index: -1;
+    animation: loadin 2s;
+    @keyframes loadin {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
