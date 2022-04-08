@@ -3,7 +3,7 @@ import { userInfo } from '../../utils/UserData'
 
 function Home() {
     return (
-        <div id='home' className='home section animate fadeUp'>
+        <div id='home' className='home section animate fadeUp medium'>
             <div className='container'>
                 <div className='home-inner'>
                     <figure className='avatar'>

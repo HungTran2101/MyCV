@@ -115,3 +115,69 @@ export const educationData = [
             'I completed this course from this prestigious institution. I successful completed all the credits without any fallout and got A grade overall.',
     },
 ];
+
+export const skillsData = [
+    {
+        title: 'Professional',
+        listSkills: [
+            {
+                name: 'HTML5',
+                progress: '90%'
+            },
+            {
+                name: 'CSS3',
+                progress: '90%'
+            },
+            {
+                name: 'jQuery',
+                progress: '70%'
+            },
+            {
+                name: 'PHP',
+                progress: '68%'
+            }
+        ]
+    },
+    {
+        title: 'Personal',
+        listSkills: [
+            {
+                name: 'Communication',
+                progress: '80%'
+            },
+            {
+                name: 'Teamwork',
+                progress: '60%'
+            },
+            {
+                name: 'Creativity',
+                progress: '70%'
+            },
+            {
+                name: 'Dedication',
+                progress: '70%'
+            }
+        ]
+    },
+    {
+        title: 'Software',
+        listSkills: [
+            {
+                name: 'Adobe Illustrator',
+                progress: '80%'
+            },
+            {
+                name: 'Adobe InDesign',
+                progress: '70%'
+            },
+            {
+                name: 'PHP Storm',
+                progress: '60%'
+            },
+            {
+                name: 'Dev Console',
+                progress: '80%'
+            }
+        ]
+    }
+];

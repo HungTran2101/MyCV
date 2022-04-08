@@ -1,5 +1,7 @@
 @import '../../../assets/scss/mixin.scss';
 
+$base-color: #06a763;
+
 .timeline{
     position: relative;
     margin-top: 90px;
@@ -8,7 +10,7 @@
         content: '';
         position: absolute;
         width: 4px;
-        background-color: #06a763;
+        background-color: $base-color;
         opacity: 0.5;
         top: -50px;
         bottom: 200px;
@@ -30,19 +32,20 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: #06a763;
+            background-color: $base-color;
             font-size: 27px;
             font-weight: bold;
             color: white;
             right: -25px;
             top: -2px;
+            box-shadow: 0px 1px 7px rgb(139, 139, 139);
 
             &::before{
                 content: '';
                 position: absolute;
                 width: 50px;
                 height: 4px;
-                background-color: #06a763;
+                background-color: $base-color;
                 opacity: 0.5;
                 top: 20px;
                 z-index: -1;
@@ -84,6 +87,7 @@
             border-left: 5px solid #1976d2;
             color: #616161;
             box-shadow: 2px 0px 7px rgb(189, 189, 189);
+            z-index: 1;
             
             .title{
                 font-size: 23px;

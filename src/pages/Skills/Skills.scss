@@ -1,0 +1,21 @@
+@import '../../assets/scss/mixin.scss';
+
+$base-color: #06a763;
+
+.skills{
+
+    .skills-inner{
+        display: flex;
+        flex-direction: column;
+        
+        .content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 40px;
+            margin-top: 25px;
+            background-color: $base-color;
+            box-shadow: 0 2px 10px rgb(184, 184, 184);
+        }
+    }
+}
