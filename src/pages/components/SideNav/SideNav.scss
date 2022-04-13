@@ -1,3 +1,5 @@
+@import '../../../assets/scss/mixin.scss';
+
 .side-nav {
     z-index: 99;
     position: fixed;
@@ -8,7 +10,7 @@
     align-items: center;
     box-shadow: 1px 0 5px rgb(165, 165, 165);
     background-color: #f5f5f5;
-    transition: 0.5s;
+    transition: .5s;
 
     .name-outer {
         display: flex;
@@ -56,12 +58,11 @@
     width: 20px;
     height: 20px;
     top: 20px;
-    left: 30px;
     background-color: rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(93, 92, 92, 0.52);
     cursor: pointer;
     padding: 12px 11px 8px 11px;
-    transition: .6s;
+    transition: .55s;
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.37);

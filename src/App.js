@@ -9,6 +9,7 @@ import SideNav from './pages/components/SideNav/SideNav';
 import About from './pages/About/About';
 import Education from './pages/Education/Education';
 import Skills from './pages/Skills/Skills'
+import Experience from './pages/Experience/Experience';
 
 function App() {
 
@@ -60,7 +61,8 @@ function App() {
 			<Home />
 			<About />
 			<Education />
-			<Skills name='Hung' />
+			<Skills />
+			<Experience />
 		</>
 	);
 }

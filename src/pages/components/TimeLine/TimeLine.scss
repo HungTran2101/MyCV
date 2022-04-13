@@ -3,27 +3,43 @@
 $base-color: #06a763;
 
 .timeline{
+    width: 100%;
     position: relative;
-    margin-top: 90px;
+    margin-top: 80px;
 
+    @include Responsive(M){
+        width: 90%;
+    }
+    @include Responsive(S){
+        margin-top: 10px;
+    }
     &::after{
         content: '';
         position: absolute;
         width: 4px;
         background-color: $base-color;
         opacity: 0.5;
-        top: -50px;
-        bottom: 200px;
+        top: -20px;
+        bottom: 27%;
         left: 50%;
         margin-left: -2px;
-        z-index: -1;
+        z-index: -2;
+
+        @include Responsive(S){
+            top: 5%;
+            bottom: 5%;
+        }
     }
     .timeline-inner{
         position: inherit;
         width: 50%;
-        margin-top: -70px;
+        margin: -65px 0 0 0;
         transition-delay: 0.5;
 
+        @include Responsive(S){
+            width: 100%;
+            margin: 20px 0;
+        }
         .timeline-bubble{
             position: absolute;
             display: flex;
@@ -39,8 +55,17 @@ $base-color: #06a763;
             right: -25px;
             top: -2px;
             box-shadow: 0px 1px 7px rgb(139, 139, 139);
+            z-index: -1;
 
-            &::before{
+            @include Responsive(S){
+                right: 20px;
+                top: 20px;
+                font-size: 25px;
+                width: 45px;
+                height: 45px;
+                z-index: 0;
+            }
+            &::after{
                 content: '';
                 position: absolute;
                 width: 50px;
@@ -48,7 +73,11 @@ $base-color: #06a763;
                 background-color: $base-color;
                 opacity: 0.5;
                 top: 20px;
-                z-index: -1;
+                z-index: -2;
+
+                @include Responsive(S){
+                    display: none;
+                }
             }
             p{
                 margin: 0;
@@ -59,12 +88,16 @@ $base-color: #06a763;
             margin-right: auto;
 
             .timeline-bubble{
-                &::before{
+                &::after{
                     right: 30px;
                 }
             }
             .content{
                 margin-right: 50px;
+
+                @include Responsive(S){
+                    margin-right: 0;
+                }
             }
         }
         &.right{
@@ -72,11 +105,18 @@ $base-color: #06a763;
 
             .content{
                 margin-left: 50px;
+
+                @include Responsive(S){
+                    margin-left: 0;
+                }
             }
             .timeline-bubble{
                 left: -25px;
 
-                &::before{
+                @include Responsive(S){
+                    left: auto;
+                }
+                &::after{
                     left: 30px;
                 }
             }
@@ -93,6 +133,10 @@ $base-color: #06a763;
                 font-size: 23px;
                 margin-bottom: 10px;
                 font-weight: 700;
+
+                @include Responsive(S){
+                    width: 80%;
+                }
             }
             .info{
                 font-size: 15px;
@@ -132,6 +176,9 @@ $base-color: #06a763;
             background-color: white;
             position: relative;
 
+            @include Responsive(L){
+                width: 75%;
+            }
             .close-tab{
                 position: absolute;
                 right: 30px;

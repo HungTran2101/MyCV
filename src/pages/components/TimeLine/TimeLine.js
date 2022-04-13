@@ -32,7 +32,7 @@ function TimeLine(props) {
 
     const CustomDescription = (string) => {
         let _string = string
-        _string = _string.substring(0, 150)
+        _string = _string.substring(0, 130)
         _string = _string.substring(0, _string.lastIndexOf('.') + 1)
         return _string
     }
@@ -53,13 +53,12 @@ function TimeLine(props) {
             {
                 props.data.map((data, index) => (
                     <div className={index % 2 === 0 ? 'timeline-inner left' : 'timeline-inner right'} key={index}>
-                        <div id='span-circle' className='timeline-bubble animate fadeIn fast'>{TimelineBubble(data.title)}</div>
-                        <div className='content animate fadeIn medium'>
+                        <div className='content animate fadeIn fast'>
                             <div className='title'>{data.title}</div>
                             <div className='info big'>{data.place}</div>
                             <div className='info big'>{data.time}</div>
                             <div className='info'>
-                                {data.description.length > 150 || data.img ? (
+                                {data.description.length > 130 || data.img ? (
                                     <>
                                         {CustomDescription(data.description)}
                                         <br />
@@ -70,6 +69,7 @@ function TimeLine(props) {
                                 )}
                             </div>
                         </div>
+                        <div id='span-circle' className='timeline-bubble animate fadeIn medium'>{TimelineBubble(data.title)}</div>
                     </div>
                 ))
             }

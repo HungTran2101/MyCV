@@ -11,7 +11,7 @@ function Home() {
                             <i className='material-icons icon'>add</i>
                         </span>
                         <span className='cross'></span>
-                        <img src={userInfo.avatar} alt='my-avatar' className='avatar-img img' />
+                        <img src={userInfo.avatar} alt='my-avatar' className='img avatar-img' />
                     </figure>
                     <div className='info'>
                         <div className='info-header'>

@@ -1,4 +1,4 @@
-import avatarImg from '../assets/images/ava-user.jpeg'
+import avatarImg from '../assets/images/ava-user1.jpg'
 import educationImg1 from '../assets/images/demo-gra.jpg';
 
 export const userInfo = {
@@ -114,6 +114,37 @@ export const educationData = [
         description:
             'I completed this course from this prestigious institution. I successful completed all the credits without any fallout and got A grade overall.',
     },
+];
+export const experienceData = [
+    {
+        title: 'Designer',
+        place: 'RulerSoft',
+        time: 'Jan 2010 - Mar 2012',
+        description:
+            'I started my designing carrier here, spent tow years learning and working in various designing aspects.',
+    },
+    {
+        title: 'Frontend Developer',
+        place: 'Micro IT',
+        time: 'Jan 2012 - Mar 2014',
+        img: educationImg1,
+        description:
+            'I started my frontend carrier here, spent tow years learning and working in various frontend aspects. I worked on about 40+ projects local and online.',
+    },
+    {
+        title: 'UI/UX Expert',
+        place: 'Libra IT Solutions',
+        time: 'Jan 2014 - Mar 2015',
+        description:
+            'I started my expertise carrier here, spent tow years learning and working in various UX/UI aspects. I worked on about 70+ projects local and online.',
+    },
+    {
+        title: 'Senior Developer',
+        place: 'WebStyle Technologies',
+        time: 'Jan 2016 - Continue...',
+        description:
+            'I recently joined here, currently working on various development aspects. I already worked on about.',
+    }
 ];
 
 export const skillsData = [

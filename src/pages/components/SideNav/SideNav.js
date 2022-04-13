@@ -30,7 +30,7 @@ function SideNav() {
                     }
                 </div>
             </div>
-            <div id='navButton' className='nav-button' onClick={handleToggleNav} style={toggleNav ? {left: '255px'} : {left: '30px'}}>
+            <div id='navButton' className='nav-button' onClick={handleToggleNav} style={toggleNav ? {left: '240px'} : {left: '30px'}}>
                 <div className={toggleNav ? 'change line1' : 'line1'}></div>
                 <div className={toggleNav ? 'change line2' : 'line2'}></div>
                 <div className={toggleNav ? 'change line3' : 'line3'}></div>

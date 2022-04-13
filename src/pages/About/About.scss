@@ -11,7 +11,7 @@ $base-color: #06a763;
         box-shadow: 0 1px 5px #a1a1a1;
 
         @include Responsive(M){
-            width: 95%;
+            width: 90%;
             margin: 0 auto;
         }
 

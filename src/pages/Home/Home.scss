@@ -17,7 +17,7 @@ $base-color: #06a763;
         
         
         @include Responsive(M) {
-            width: 95%;
+            width: 90%;
             margin: 0 auto;
         }
         @include Responsive(S){
@@ -30,7 +30,6 @@ $base-color: #06a763;
             position: relative;
             margin: 0;
             background-size: cover;
-            flex-shrink: 0;
 
             @include Responsive(S){
                 width: 130px;
@@ -40,10 +39,11 @@ $base-color: #06a763;
             .cross {
                 position: absolute;
                 background-color: transparent;
-                border-bottom: 400px solid #06a763;
+                border-bottom: 401px solid #06a763;
                 border-right: 100px solid transparent;
                 width: 0px;
                 height: 0px;
+                left: -1px;
 
                 @include Responsive(S){
                     display: none;
@@ -150,7 +150,7 @@ $base-color: #06a763;
                     height: 20px;
                     transition: .3s;
                     box-shadow: 0 2px 5px rgb(87, 87, 87);
-    
+
                     &:hover {
                         box-shadow: 0 2px 5px rgb(75, 75, 75);
                         transform: translateY(-5px);
