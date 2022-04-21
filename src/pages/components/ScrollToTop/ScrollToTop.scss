@@ -1,0 +1,21 @@
+@import '../../../assets/scss/mixin.scss';
+
+.scroll-btn{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    height: 47px;
+    color: white;
+    font-size: 30px;
+    background-color: #1976D2;
+    text-decoration: none;
+    right: 30px;
+    bottom: 25px;
+    box-shadow: 0 5px 10px rgb(151, 151, 151);
+
+    .arrow{
+        margin-bottom: 5px;
+    }
+}

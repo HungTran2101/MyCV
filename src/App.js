@@ -4,16 +4,19 @@ import { useEffect, useState } from 'react';
 
 import Loading from './pages/Loading/Loading'
 import Header from './pages/components/Header/Header';
+import ScrollToTop from './pages/components/ScrollToTop/ScrollToTop'
 import Home from './pages/Home/Home';
 import SideNav from './pages/components/SideNav/SideNav';
 import About from './pages/About/About';
 import Education from './pages/Education/Education';
 import Skills from './pages/Skills/Skills'
 import Experience from './pages/Experience/Experience';
+import Portfolios from './pages/Portfolios/Portfolios';
 
 function App() {
 
 	const [loaded, setLoaded] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 
 	// const animateList = ['fadeUp', 'fadeIn']
 	// const selectAnimation = (classList) => {
@@ -47,6 +50,16 @@ function App() {
 	});
 
 	useEffect(() => {
+		window.onscroll = () => {
+			if (window.pageYOffset < 300) {
+				setScrolled(false);
+			} else {
+				setScrolled(true);
+			}
+		};
+	}, []);
+
+	useEffect(() => {
 		setTimeout(() => {
 			setLoaded(true);
 		}, 100);
@@ -63,6 +76,8 @@ function App() {
 			<Education />
 			<Skills />
 			<Experience />
+			<Portfolios />
+			{scrolled && <ScrollToTop />}
 		</>
 	);
 }
