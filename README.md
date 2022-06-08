@@ -1,4 +1,4 @@
-## [Link to my online CV](https://trannhathung-cv.herokuapp.com)
+## [Link to my practice React online CV](https://trannhathung-cv.herokuapp.com)
 
 # Getting Started with Create React App
 
