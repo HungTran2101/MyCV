@@ -1,123 +1,138 @@
 @import "/src/assets/scss/mixin.scss";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
-    .no-scrollbar::-webkit-scrollbar{
-        display: none;
-    }
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        
-    }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  }
 
-    &::-webkit-scrollbar {
-        width: 10px;
-        background-color: #f5f5f5;
-    }
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
 
-    &::-webkit-scrollbar-thumb {
-        border-radius: 0px;
-        background-color: #fff;
-        background-image: -webkit-linear-gradient(
-            top,
-            #05985a 0%,
-            #fff 50%,
-            #05985a 100%
-        );
-    }
-    body {
-        margin: 0;
-        background-color: #f5f5f5;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+  &::-webkit-scrollbar-thumb {
+    background-color: #0ac074;
+  }
+  body {
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-        #root {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    #root {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-            .img {
-                width: 100%;
-                height: 100%;
-            }
-            .container {
-                width: 100%;
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-            .section {
-                width: 100%;
-                padding: 40px 0;
-                top: 50px;
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .section {
+        width: 100%;
+        padding: 40px 0;
+        top: 50px;
 
-                @include Responsive(XS) {
-                    padding: 30px 0;
-                }
-            }
-            .animate {
-                opacity: 0;
-
-                &.fadeUp{
-                    transform: translateY(50px) scale(0.7);
-                }
-                &.fadeIn{
-                    transform: scale(0.8);
-                }
-                &.animateDone{
-                    transform: none;
-                    opacity: 1;
-                }
-                &.slow{
-                    transition: transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1),
-                        opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1);
-                }
-                &.medium{
-                    transition: transform 1.3s cubic-bezier(0.6, 0.2, 0.1, 1),
-                        opacity 1.3s cubic-bezier(0.6, 0.2, 0.1, 1);
-                }
-                &.fast{
-                    transition: transform .7s cubic-bezier(0.6, 0.2, 0.1, 1),
-                    opacity .7s cubic-bezier(0.6, 0.2, 0.1, 1);
-                }
-            }
-            .modal-fadeInDown{
-                @include keyframes (modalFadeInDown) {
-                    0% {
-                        opacity: 0;
-                        top: -20%;
-                    }
-                    100% {
-                        opacity: 1;
-                        top: 0px;
-                    }
-                }
-                @include animation('.6s cubic-bezier(0.6, 0.2, 0.1, 1) modalFadeInDown ')
-            }
-            .modal-fadeOutUp{
-                @include keyframes (modalFadeOutUp) {
-                    0% {
-                        opacity: 1;
-                        top: 0px;
-                    }
-                    100% {
-                        opacity: 0;
-                        top: -20%;
-                    }
-                }
-                @include animation('.6s cubic-bezier(0.6, 0.2, 0.1, 1) forwards modalFadeOutUp ')
-            }
-
-            
+        @include Responsive(XS) {
+          padding: 30px 0;
         }
-    }
+      }
+      .animate {
+        opacity: 0;
 
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-            monospace;
+        &.fadeUp {
+          transform: translateY(50px) scale(0.7);
+        }
+        &.fadeIn {
+          transform: scale(0.8);
+        }
+        &.animateDone {
+          transform: none;
+          opacity: 1;
+        }
+        &.slow {
+          transition: transform 1.8s cubic-bezier(0.6, 0.2, 0.1, 1),
+            opacity 1.8s cubic-bezier(0.6, 0.2, 0.1, 1);
+        }
+        &.medium {
+          transition: transform 1.3s cubic-bezier(0.6, 0.2, 0.1, 1),
+            opacity 1.3s cubic-bezier(0.6, 0.2, 0.1, 1);
+        }
+        &.fast {
+          transition: transform 0.7s cubic-bezier(0.6, 0.2, 0.1, 1),
+            opacity 0.7s cubic-bezier(0.6, 0.2, 0.1, 1);
+        }
+      }
+      .modal-fadeInDown {
+        @include keyframes(modalFadeInDown) {
+          0% {
+            opacity: 0;
+            top: -20%;
+          }
+          100% {
+            opacity: 1;
+            top: 0px;
+          }
+        }
+        @include animation(
+          ".6s cubic-bezier(0.6, 0.2, 0.1, 1) modalFadeInDown "
+        );
+      }
+      .modal-fadeOutUp {
+        @include keyframes(modalFadeOutUp) {
+          0% {
+            opacity: 1;
+            top: 0px;
+          }
+          100% {
+            opacity: 0;
+            top: -20%;
+          }
+        }
+        @include animation(
+          ".6s cubic-bezier(0.6, 0.2, 0.1, 1) forwards modalFadeOutUp "
+        );
+      }
+
+      /*Modal*/
+      .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+      }
+
+      .modalOverlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .modalBody {
+        margin: auto;
+        position: relative;
+        z-index: 1;
+      }
     }
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
 }

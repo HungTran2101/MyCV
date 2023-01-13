@@ -1,5 +1,12 @@
 import avatarImg from '../assets/images/ava-user1.jpg'
 import educationImg1 from '../assets/images/demo-gra.jpg';
+import portfoliosImgB1 from '../assets/images/big-1.jpg';
+import portfoliosImg1 from '../assets/images/portfolio-1.jpg';
+import portfoliosImg2 from '../assets/images/portfolio-2.jpg';
+import portfoliosImgB2 from '../assets/images/big-2.jpg';
+import portfoliosImg3 from '../assets/images/portfolio-3.jpg';
+import portfoliosImg4 from '../assets/images/portfolio-4.jpg';
+
 
 export const userInfo = {
     name: 'Tran Nhat Hung',
@@ -211,4 +218,148 @@ export const skillsData = [
             }
         ]
     }
+];
+
+export const portfoliosData = [
+  {
+    type: 'logo',
+    items: [
+      {
+        title: 'lightbox',
+        type: 'photo',
+        text: 'Two Hover Effect For Portfolio Grid Blocks. Its Scale',
+        thumbnail: portfoliosImgB1,
+        url: portfoliosImgB1,
+        alt: 'portfolios',
+        captionAnimate: 'fadeIn',
+        animate: 'slideInLeft',
+        lightboxAnimate: 'flip'
+      },
+      {
+        title: 'lightbox',
+        type: 'video',
+        text: 'I designed this for a client for his cafe.',
+        thumbnail: portfoliosImg1,
+        url: 'https://player.vimeo.com/video/45830194?h=2c5541d8bc&color=ffffff&title=0&byline=0&portrait=0&badge=0',
+        alt: 'portfolios',
+        captionAnimate: 'fadeIn',
+        animate: 'slideInRight',
+        lightboxAnimate: 'slide'
+      },
+      {
+        title: 'lightbox',
+        type: 'photo',
+        text: 'Two Hover Effect For Portfolio Grid Blocks. Its Scale',
+        thumbnail: portfoliosImg2,
+        url: portfoliosImg2,
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInRight',
+        lightboxAnimate: 'slide'
+      },
+    ],
+  },
+  {
+    type: 'dribble',
+    items: [
+      {
+        title: 'lightbox',
+        type: 'photo',
+        text: 'Effect also available for Lightbox Image Check The Doc',
+        thumbnail: portfoliosImgB2,
+        url: portfoliosImgB2,
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInRight',
+        lightboxAnimate: 'slide'
+      },
+      {
+        title: 'lightbox',
+        type: 'photo',
+        text: 'Two Hover Effect For Portfolio Grid Blocks. Its Scale',
+        thumbnail: portfoliosImg3,
+        url: portfoliosImg3,
+        alt: 'portfolios',
+        captionAnimate: 'fadeIn',
+        animate: 'slideInLeft',
+        lightboxAnimate: 'fade'
+      },
+      {
+        title: 'lightbox',
+        type: 'photo',
+        text: 'I designed this for a client for his cafe.',
+        thumbnail: portfoliosImg4,
+        url: portfoliosImg4,
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInLeft',
+        lightboxAnimate: 'flip'
+      },
+    ],
+  },
+  {
+    type: 'websites',
+    items: [
+      {
+        title: 'single',
+        type: 'url',
+        text: 'Showcase Your Portfolio in Details on a Single Page',
+        thumbnail: portfoliosImgB1,
+        url: 'https://www.youtube.com/watch?v=Mf6I68db-R8',
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInLeft'
+      },
+      {
+        title: 'single',
+        type: 'url',
+        text: 'Showcase Your Portfolio in Details on a Single Page',
+        thumbnail: portfoliosImg1,
+        url: 'https://www.youtube.com/watch?v=O_vzVAKTsV8',
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInRight'
+      },
+      {
+        title: 'single',
+        type: 'url',
+        text: 'Showcase Your Portfolio in Details on a Single Page',
+        thumbnail: portfoliosImg2,
+        url: 'https://www.youtube.com/watch?v=P0iO3iSSqbM',
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInLeft'
+      },
+      {
+        title: 'single',
+        type: 'url',
+        text: 'Showcase Your Portfolio in Details on a Single Page',
+        thumbnail: portfoliosImgB2,
+        url: 'https://www.youtube.com/watch?v=WZgW2yWHr5s',
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInLeft'
+      },
+      {
+        title: 'single',
+        type: 'url',
+        text: 'Showcase Your Portfolio in Details on a Single Page',
+        thumbnail: portfoliosImg3,
+        url: 'https://www.youtube.com/watch?v=vwRlKqDltlI',
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInRight'
+      },
+      {
+        title: 'single',
+        type: 'url',
+        text: 'Showcase Your Portfolio in Details on a Single Page',
+        thumbnail: portfoliosImg4,
+        url: 'https://www.youtube.com/watch?v=Rh85Vqummy8',
+        alt: 'portfolios',
+        captionAnimate: 'slideUp',
+        animate: 'slideInLeft'
+      },
+    ],
+  },
 ];

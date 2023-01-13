@@ -1,0 +1,111 @@
+@import "../../../../assets/scss/mixin.scss";
+
+.modalBody {
+  perspective: 1500px;
+
+  @include Responsive(M){
+    width: 90%;
+  }
+
+  .mediaContain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .close{
+      color: #c5c5c5;
+      font-size: 25px;
+      font-weight: bold;
+      align-self: flex-end;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .media{
+      margin: 0;
+      max-width: 100%;
+    }
+    .videoMedia{
+      width: 900px;
+      height: 500px;
+      border: none;
+    }
+
+    // animations
+    &.flipY{
+      animation: flipY .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    &.flipOutY{
+      animation: flipOutY .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    &.slide{
+      animation: slide .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    &.slideOut{
+      animation: slideOut .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    &.fade{
+      animation: fade .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    &.fadeOut{
+      animation: fadeOut .5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    // keyframes
+    @keyframes flipY {
+      from {
+        opacity: 0;
+        transform: rotateY(-50deg)
+      }
+      to{
+        opacity: 1;
+        transform: rotateY(0)
+      }
+    }
+    @keyframes flipOutY {
+      from {
+        opacity: 1;
+        transform: rotateY(0)
+      }
+      to{
+        opacity: 0;
+        transform: rotateY(50deg)
+      }
+    }
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to{
+        opacity: 0;
+      }
+    }
+    @keyframes slide {
+      from {
+        opacity: 0;
+        transform: translateX(-100px)
+      }
+      to{
+        opacity: 1;
+        transform: translateX(0px)
+      }
+    }
+    @keyframes slideOut {
+      from {
+        opacity: 1;
+        transform: translateX(0px)
+      }
+      to{
+        opacity: 0;
+        transform: translateX(100px)
+      }
+    }
+  }
+}

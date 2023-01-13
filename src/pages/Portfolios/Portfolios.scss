@@ -1,2 +1,25 @@
-@import '../../assets/scss/mixin.scss'
+@import "../../assets/scss/mixin.scss";
 
+.portfolios {
+  .portfolios-inner {
+    position: relative;
+
+    .viewAll{
+      box-shadow: 0px 1px 7px #929292;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 13px 33px;
+      width: fit-content;
+      border-radius: 3px;
+      color: #1976D2;
+      font-size: 22px;
+      cursor: pointer;
+      transition: all .5s;
+
+      &:hover{
+        box-shadow: 0px 3px 15px #929292;
+      }
+    }
+  }
+}
