@@ -40,9 +40,9 @@ function TimeLine(props) {
     const TimelineBubble = (title) => {
         switch (title) {
             case 'Web Development':
-                return <i className='fa fa-globe'></i>;
+                return <i className='fa-solid fa-earth-americas'></i>;
             case 'Software Engineering':
-                return <i className='fas fa-graduation-cap'></i>;
+                return <i className='fa-solid fa-graduation-cap'></i>;
             default:
                 return <p>{title.charAt(0)}</p>;
         }

@@ -42,7 +42,7 @@ export default function Portfolios() {
           />
           {option === "all" && (
             <div className="viewAll" onClick={() => setViewAll(!viewAll)}>
-              <i className={viewAll ? "fas fa-arrow-up" : "fas fa-plus"}></i>
+              <i className={viewAll ? "fa-solid fa-arrow-up" : "fa-solid fa-plus"}></i>
             </div>
           )}
         </div>
