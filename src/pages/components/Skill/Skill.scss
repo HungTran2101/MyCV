@@ -4,11 +4,17 @@
     color: white;
     width: 33.333%;
     margin: 40px 30px;
+    transition: transform 0.3s;
 
     @include Responsive(S){
         width: 80%;
         margin: 20px 0 10px;
     }
+
+    &:hover{
+      transform: translateY(-5px);
+    }
+
     .title{
         text-align: center;
         font-size: 21px;
@@ -21,6 +27,11 @@
         }
     } 
     .progress-section{
+      transition: all .3s;
+
+      &:hover{
+        transform: scale(1.02);
+      }
 
         .name-section{
             display: flex;
@@ -29,7 +40,6 @@
 
             .name{
                 font-size: 16px;
-                font-weight: 400;
             }
             .progress-number{
                 font-size: 14px;

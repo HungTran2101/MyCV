@@ -69,7 +69,7 @@ function TimeLine(props) {
                                 )}
                             </div>
                         </div>
-                        <div id='span-circle' className='timeline-bubble animate fadeIn medium'>{TimelineBubble(data.title)}</div>
+                        <div id='span-circle' className='timeline-bubble animate fadeIn fast'>{TimelineBubble(data.title)}</div>
                     </div>
                 ))
             }
