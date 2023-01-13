@@ -1,221 +1,228 @@
-@import '../../../assets/scss/mixin.scss';
+@import "../../../assets/scss/mixin.scss";
 
 $base-color: #06a763;
 
-.timeline{
-    width: 100%;
-    position: relative;
-    margin-top: 80px;
+.timeline {
+  width: 100%;
+  position: relative;
+  margin-top: 80px;
 
-    @include Responsive(M){
-        width: 90%;
+  @include Responsive(M) {
+    width: 90%;
+  }
+  @include Responsive(S) {
+    margin-top: 10px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: $base-color;
+    opacity: 0.5;
+    top: -20px;
+    bottom: 27%;
+    left: 50%;
+    margin-left: -2px;
+    z-index: -2;
+
+    @include Responsive(S) {
+      top: 5%;
+      bottom: 5%;
     }
-    @include Responsive(S){
-        margin-top: 10px;
+  }
+  .timeline-inner {
+    position: inherit;
+    width: 50%;
+    margin: -65px 0 0 0;
+    transition-delay: 0.5;
+
+    @include Responsive(S) {
+      width: 100%;
+      margin: 20px 0;
     }
-    &::after{
-        content: '';
+
+    &:hover {
+      .timeline-bubble, .content {
+        transform: translateY(-5px) !important;
+      }
+    }
+    .timeline-bubble {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $base-color;
+      font-size: 27px;
+      font-weight: bold;
+      color: white;
+      right: -25px;
+      top: -2px;
+      box-shadow: 0px 1px 7px rgb(139, 139, 139);
+      z-index: -1;
+
+      @include Responsive(S) {
+        right: 20px;
+        top: 20px;
+        font-size: 25px;
+        width: 45px;
+        height: 45px;
+        z-index: 0;
+      }
+      &::after {
+        content: "";
         position: absolute;
-        width: 4px;
+        width: 50px;
+        height: 4px;
         background-color: $base-color;
         opacity: 0.5;
-        top: -20px;
-        bottom: 27%;
-        left: 50%;
-        margin-left: -2px;
+        top: 20px;
         z-index: -2;
 
-        @include Responsive(S){
-            top: 5%;
-            bottom: 5%;
+        @include Responsive(S) {
+          display: none;
         }
+      }
+      p {
+        margin: 0;
+        text-shadow: 1px 2px 10px rgb(87, 87, 87);
+      }
     }
-    .timeline-inner{
-        position: inherit;
-        width: 50%;
-        margin: -65px 0 0 0;
-        transition-delay: 0.5;
+    &.left {
+      margin-right: auto;
 
-        @include Responsive(S){
-            width: 100%;
-            margin: 20px 0;
+      .timeline-bubble {
+        &::after {
+          right: 30px;
         }
-        .timeline-bubble{
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: $base-color;
-            font-size: 27px;
-            font-weight: bold;
-            color: white;
-            right: -25px;
-            top: -2px;
-            box-shadow: 0px 1px 7px rgb(139, 139, 139);
-            z-index: -1;
+      }
+      .content {
+        margin-right: 50px;
 
-            @include Responsive(S){
-                right: 20px;
-                top: 20px;
-                font-size: 25px;
-                width: 45px;
-                height: 45px;
-                z-index: 0;
-            }
-            &::after{
-                content: '';
-                position: absolute;
-                width: 50px;
-                height: 4px;
-                background-color: $base-color;
-                opacity: 0.5;
-                top: 20px;
-                z-index: -2;
-
-                @include Responsive(S){
-                    display: none;
-                }
-            }
-            p{
-                margin: 0;
-                text-shadow: 1px 2px 10px rgb(87, 87, 87);
-            }
+        @include Responsive(S) {
+          margin-right: 0;
         }
-        &.left{
-            margin-right: auto;
-
-            .timeline-bubble{
-                &::after{
-                    right: 30px;
-                }
-            }
-            .content{
-                margin-right: 50px;
-
-                @include Responsive(S){
-                    margin-right: 0;
-                }
-            }
-        }
-        &.right{
-            margin-left: auto;
-
-            .content{
-                margin-left: 50px;
-
-                @include Responsive(S){
-                    margin-left: 0;
-                }
-            }
-            .timeline-bubble{
-                left: -25px;
-
-                @include Responsive(S){
-                    left: auto;
-                }
-                &::after{
-                    left: 30px;
-                }
-            }
-        }
-        .content{
-            padding: 20px 30px;
-            background-color: white;
-            border-left: 5px solid #1976d2;
-            color: #616161;
-            box-shadow: 2px 0px 7px rgb(189, 189, 189);
-            z-index: 1;
-            
-            .title{
-                font-size: 23px;
-                margin-bottom: 10px;
-                font-weight: 700;
-
-                @include Responsive(S){
-                    width: 80%;
-                }
-            }
-            .info{
-                font-size: 15px;
-                margin: 10px auto;
-                font-weight: 400;
-
-                &.big{
-                    margin: 3px auto;
-                    font-weight: 600;
-                }
-                .dot{
-                    cursor: pointer;
-                    color: #1976D2;
-                }
-            }
-        }
+      }
     }
+    &.right {
+      margin-left: auto;
 
-    .modal{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        top: 0px;
-        left: 0px;
-        background-color: rgba(0, 0, 0, 0.6);
-        transition: all .5s;
-        z-index: 101;
+      .content {
+        margin-left: 50px;
 
-        &::-webkit-scrollbar{
-            display: none;
+        @include Responsive(S) {
+          margin-left: 0;
         }
-        .detail-zone{
-            margin: 50px auto;
-            padding: 20px 30px 40px 30px;
-            width: 900px;
-            height: fit-content;
-            background-color: white;
-            position: relative;
+      }
+      .timeline-bubble {
+        left: -25px;
 
-            @include Responsive(L){
-                width: 75%;
-            }
-            .close-tab{
-                position: absolute;
-                right: 30px;
-                font-weight: 800;
-                font-size: 28px;
-                color: #c4c4c4;
-                transition: color .3s;
-
-                &:hover, :focus{
-                    color: #1976d2;
-                    cursor: pointer;
-                }
-            }
-            .content{
-                color: #616161;
-                .title{
-                    text-align: center;
-                    font-size: 35px;
-                    font-weight: 700;
-                    margin: 0 auto 10px auto;
-                }
-                .info{
-                    margin: 30px auto 10px auto;
-                    text-align: justify;
-                }
-                .big{
-                    margin: 0 auto 10px auto;
-                    text-align: center;
-                    font-size: 20px;
-                    font-weight: 400;
-                }
-                .detail-img{
-                    width: 100%;
-                    margin: 0;
-                }
-            }
+        @include Responsive(S) {
+          left: auto;
         }
+        &::after {
+          left: 30px;
+        }
+      }
     }
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      border-left: 5px solid #1976d2;
+      color: #616161;
+      box-shadow: 2px 0px 7px rgb(189, 189, 189);
+      z-index: 1;
+
+      .title {
+        font-size: 23px;
+        margin-bottom: 10px;
+        font-weight: 700;
+
+        @include Responsive(S) {
+          width: 80%;
+        }
+      }
+      .info {
+        font-size: 15px;
+        margin: 10px auto;
+        font-weight: 400;
+
+        &.big {
+          margin: 3px auto;
+          font-weight: 600;
+        }
+        .dot {
+          cursor: pointer;
+          color: #1976d2;
+        }
+      }
+    }
+  }
+
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+    z-index: 101;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .detail-zone {
+      margin: 50px auto;
+      padding: 20px 30px 40px 30px;
+      width: 900px;
+      height: fit-content;
+      background-color: white;
+      position: relative;
+
+      @include Responsive(L) {
+        width: 75%;
+      }
+      .close-tab {
+        position: absolute;
+        right: 30px;
+        font-weight: 800;
+        font-size: 28px;
+        color: #c4c4c4;
+        transition: color 0.3s;
+
+        &:hover,
+        :focus {
+          color: #1976d2;
+          cursor: pointer;
+        }
+      }
+      .content {
+        color: #616161;
+        .title {
+          text-align: center;
+          font-size: 35px;
+          font-weight: 700;
+          margin: 0 auto 10px auto;
+        }
+        .info {
+          margin: 30px auto 10px auto;
+          text-align: justify;
+        }
+        .big {
+          margin: 0 auto 10px auto;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        .detail-img {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
