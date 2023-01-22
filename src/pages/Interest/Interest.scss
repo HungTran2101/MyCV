@@ -1,0 +1,71 @@
+@import "../../assets/scss/mixin.scss";
+
+.interest {
+  .interestWrapper {
+    background-color: white;
+    box-shadow: 0 0 7px #b4b4b4;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .content {
+      text-align: center;
+      padding: 40px 35px;
+      color: #757575;
+      border-bottom: 1px solid #ececec;
+    }
+    .interestList {
+      display: grid;
+
+      &.one {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      &.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      &.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      &.four {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      &.five {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      &.six {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .interestItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0 20px;
+        transition: all .1s linear;
+
+        &.green {
+          background-color: #06a763;
+          color: #ffffff;
+        }
+        &.white {
+          background-color: white;
+          color: #06a763;
+        }
+        &:hover{
+          transform: scale(1.025);
+          box-shadow:0 0 5px #a7a7a7 ;
+        }
+
+        .icon{
+          font-size: 30px;
+        }
+        .text{
+          font-weight: 500;
+          margin-top: 5px;
+          text-transform: capitalize;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
