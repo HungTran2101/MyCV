@@ -6,7 +6,7 @@ function Interest() {
 
 
   return (
-    <div className="interest section animate fadeUp medium">
+    <div id="interest" className="interest section animate fadeUp medium">
       <div className="container">
         <SectionTitle title="interest" />
         <div className="interestWrapper">
