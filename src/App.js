@@ -67,7 +67,7 @@ function App() {
     setTimeout(() => {
       setLoaded(true);
     }, 100);
-  });
+  }, []);
 
   return !loaded ? (
     <Loading />

@@ -6,7 +6,11 @@
     box-shadow: 0 0 7px #b4b4b4;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px auto 0px;
+
+    @include Responsive(M) {
+      width: 90%;
+    }
 
     .content {
       text-align: center;
@@ -16,24 +20,13 @@
     }
     .interestList {
       display: grid;
+      grid-template-columns: repeat(6, 1fr);
 
-      &.one {
-        grid-template-columns: repeat(1, 1fr);
-      }
-      &.two {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      &.three {
+      @include Responsive(M) {
         grid-template-columns: repeat(3, 1fr);
       }
-      &.four {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      &.five {
-        grid-template-columns: repeat(5, 1fr);
-      }
-      &.six {
-        grid-template-columns: repeat(6, 1fr);
+      @include Responsive(XS) {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .interestItems {
@@ -41,7 +34,7 @@
         flex-direction: column;
         align-items: center;
         padding: 30px 0 20px;
-        transition: all .1s linear;
+        transition: all 0.1s linear;
 
         &.green {
           background-color: #06a763;
@@ -51,15 +44,15 @@
           background-color: white;
           color: #06a763;
         }
-        &:hover{
+        &:hover {
           transform: scale(1.025);
-          box-shadow:0 0 5px #a7a7a7 ;
+          box-shadow: 0 0 5px #a7a7a7;
         }
 
-        .icon{
+        .icon {
           font-size: 30px;
         }
-        .text{
+        .text {
           font-weight: 500;
           margin-top: 5px;
           text-transform: capitalize;
