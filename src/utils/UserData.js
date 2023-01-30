@@ -475,6 +475,57 @@ export const testimonialsData = {
   ],
 };
 
+export const pricingData = [
+  {
+    name: "starter",
+    price: 50,
+    period: "mo",
+    bandwidth: {
+      value: 2,
+      unit: "gb",
+    },
+    diskspace: {
+      value: 5,
+      unit: "gb",
+    },
+    databases: 5,
+    domain: "free",
+    subdomains: 5,
+  },
+  {
+    name: "ultimate",
+    price: 200,
+    period: "mo",
+    bandwidth: {
+      value: -1, //unlimited
+      unit: "gb",
+    },
+    diskspace: {
+      value: -1,
+      unit: "gb",
+    },
+    databases: -1,
+    domain: "free",
+    subdomains: -1,
+  },
+  {
+    name: "business",
+    price: 100,
+    period: "mo",
+    bandwidth: {
+      value: 5,
+      unit: "gb",
+    },
+    diskspace: {
+      value: 25,
+      unit: "gb",
+    },
+    databases: 10,
+    domain: "free",
+    subdomains: 15,
+  },
+];
+
 export const blogData = [
   {
     title: "material design",
