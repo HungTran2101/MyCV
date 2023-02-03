@@ -24,7 +24,6 @@
         flex-shrink: 0;
         position: relative;
         overflow: hidden;
-        transition: all 0.3s;
 
         &:hover {
           &::after {
@@ -33,7 +32,7 @@
           .img {
             transform: scale(1.05);
           }
-          .caption{
+          .caption {
             transform: translateY(0%);
           }
         }
@@ -50,7 +49,7 @@
         }
 
         .img {
-          transition: all 0.5s;
+          transition: transform 0.5s;
         }
         .caption {
           position: absolute;
@@ -59,7 +58,7 @@
           margin: 0 10px 8px 0;
           color: white;
           transform: translateY(110%);
-          transition: all 0.3s;
+          transition: transform 0.3s;
           z-index: 2;
 
           .captionItem {
@@ -75,7 +74,7 @@
       }
       .blogInfo {
         width: 50%;
-        padding: 0 40px;
+        padding: 40px;
         margin: auto 0;
 
         .breadcrumb {
@@ -114,6 +113,50 @@
           border-bottom: 1px solid #dcdcdc;
           text-decoration: none;
           color: #267ed4;
+        }
+      }
+    }
+
+    @include Responsive(M) {
+      margin: 20px auto 0;
+      width: 80%;
+
+      .blogItem {
+        .blogInfo {
+          padding: 35px 40px;
+          margin: 0;
+        }
+      }
+    }
+    @include Responsive(S) {
+      .blogItem {
+        flex-direction: column !important;
+
+        &.bannerRight {
+          flex-direction: column;
+
+          .blogInfo {
+            text-align: center;
+          }
+        }
+        .blogBanner {
+          width: 100%;
+        }
+        .blogInfo {
+          width: 100%;
+          padding: 35px 0;
+          text-align: center;
+
+          .content,
+          .title,
+          .breadcrumb {
+            padding: 0 40px;
+          }
+          .breadcrumb {
+            span {
+              display: inline-block;
+            }
+          }
         }
       }
     }

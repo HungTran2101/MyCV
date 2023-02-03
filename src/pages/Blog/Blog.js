@@ -31,7 +31,7 @@ function Blog() {
                       {index < data.breadcrumb.length - 1 && (
                         <span className="slash">/</span>
                       )}
-                    </span>
+                    </span> 
                   ))}
                 </div>
                 <div className="title">{data.title}</div>
