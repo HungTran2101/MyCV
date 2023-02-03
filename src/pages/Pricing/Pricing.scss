@@ -9,7 +9,7 @@
 
     @include Responsive(M) {
       margin: 20px auto 0;
-      width: 90%;
+      width: 80%;
     }
     @include Responsive(S) {
       flex-direction: column;

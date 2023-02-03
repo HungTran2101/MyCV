@@ -1,1 +1,48 @@
 @import "../../assets/scss/mixin.scss";
+
+.contact {
+  .contactWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    margin-top: 20px;
+
+    .contactForm {
+      box-shadow: 0 0 7px #b4b4b4;
+      background-color: white;
+      padding: 35px 0;
+      width: 650px;
+
+      .send {
+        background-color: #06a763;
+        color: white;
+        width: fit-content;
+        box-shadow: 0 2px 7px #b4b4b4;
+        border-radius: 2px;
+        padding: 7px 35px;
+        text-transform: uppercase;
+        margin: 30px 40px 0;
+      }
+    }
+    .googleMapPlugin {
+      box-shadow: 0 0 7px #b4b4b4;
+      height: auto;
+      width: 100%;
+    }
+
+    @include Responsive(M) {
+      width: 80%;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px auto 0;
+
+      .contactForm {
+        width: 100%;
+      }
+      .googleMapPlugin{
+        height: 500px;
+      }
+    }
+  }
+}

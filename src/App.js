@@ -17,6 +17,7 @@ import Testmonials from "./pages/Testimonials/Testimonials";
 import Pricing from "./pages/Pricing/Pricing";
 import Blog from "./pages/Blog/Blog";
 import Contact from "./pages/Contact/Contact";
+import Footer from "./pages/components/Footer/Footer";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -86,6 +87,7 @@ function App() {
       <Pricing />
       <Blog />
       <Contact />
+      <Footer />
       {scrolled && <ScrollToTop />}
     </>
   );

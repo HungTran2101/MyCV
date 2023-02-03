@@ -1,0 +1,51 @@
+@import "../../../../assets/scss/mixin.scss";
+
+.contact {
+  .contactForm {
+    .inputField {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5px;
+      padding: 0 40px;
+
+      &:focus-within {
+        .label {
+          transform: translateY(0px);
+          color: #1976d2;
+          font-size: 13px;
+        }
+        .input {
+          border-bottom: 1px solid #1976d2;
+          box-shadow: 0 1px 0 #1976d2;
+        }
+      }
+
+      .label {
+        width: fit-content;
+        height: 10px;
+        color: #afafaf;
+        transition: 0.3s;
+        transform: translateY(20px);
+        text-transform: capitalize;
+      }
+      .input {
+        background-color: transparent;
+        color: #6d6d6d;
+        font-size: 16px;
+        outline: none;
+        border: none;
+        padding: 5px 1px;
+        border-bottom: 1px solid #dcdcdc;
+        position: relative;
+        transition: 0.3s;
+        height: 30px;
+        margin-top: 5px;
+
+        &.textarea {
+          resize: none;
+          height: 80px;
+        }
+      }
+    }
+  }
+}

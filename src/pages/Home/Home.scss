@@ -1,177 +1,176 @@
-@import '../../assets/scss/mixin.scss';
+@import "../../assets/scss/mixin.scss";
 
 $base-color: #06a763;
 
 .home {
-    margin: -250px 0 0;
+  margin: -250px 0 0;
 
-    .home-inner{
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        width: 100%;
-        height: 400px;
-        background-color: $base-color;
-        box-shadow: 0 1px 5px rgb(58, 58, 58);
-        
-        
-        @include Responsive(M) {
-            width: 90%;
-            margin: 0 auto;
-        }
-        @include Responsive(S){
-            flex-direction: column;
-            justify-content: flex-start;
-            height: auto;
-        }
-        .avatar {
-            z-index: 1;
-            position: relative;
-            margin: 0;
-            background-size: cover;
+  .home-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 400px;
+    background-color: $base-color;
+    box-shadow: 0 1px 5px rgb(58, 58, 58);
 
-            @include Responsive(S){
-                width: 130px;
-                margin: -70px auto 0;
-            }
-    
-            .cross {
-                position: absolute;
-                background-color: transparent;
-                border-bottom: 401px solid #06a763;
-                border-right: 100px solid transparent;
-                width: 0px;
-                height: 0px;
-                left: -1px;
-
-                @include Responsive(S){
-                    display: none;
-                }
-            }
-            .avatar-img{
-                @include Responsive(S){
-                    border-radius: 50%;
-                }
-            }
-            .plus-btn {
-                z-index: 3;
-                position: absolute;
-                padding: 10px;
-                width: 40px;
-                height: 40px;
-                background-color: #1976d2;
-                border-radius: 50%;
-                top: 85px;
-                margin: auto 0;
-                box-shadow: 0 0 7px rgb(61, 61, 61);
-                cursor: pointer;
-                transition: 0.5s;
-
-                @include Responsive(S){
-                    display: none;
-                }
-
-                &:hover {
-                    box-shadow: 0 0 14px rgb(61, 61, 61);
-                }
-                .icon {
-                    font-size: 40px;
-                    color: white;
-                }
-            }
-        }
-        .info {
-            padding: 50px 45px;
-
-            @include Responsive(S){
-                text-align: center;
-                align-items: center;
-                width: auto;
-                padding: 0 0 10px 0;
-            }
-            .info-header{
-                .name {
-                    color: white;
-                    margin: 5px 0 0 0;
-                    font-size: 30px;
-                    text-shadow: 2px 2px 5px rgb(97, 97, 97);
-                    letter-spacing: 0px;
-                }
-                .job {
-                    color: white;
-                    margin: 0;
-                    font-size: 20px;
-                    font-weight: 400;
-                    text-shadow: 2px 2px 5px rgb(97, 97, 97);
-                }
-            }
-            .info-body{
-                width: fit-content;
-
-                @include Responsive(S){
-                    margin: 0 auto;
-                }
-                .contact {
-                    margin-top: 30px;
-                    padding: 0;
-                    list-style-type: none;
-                    text-align: left;
-
-                    .contact-row {
-                        position: relative;
-                        color: white;
-                        margin: 10px 0;
-                        font-weight: 500;
-
-                        .contact-data {
-                            font-size: 15px;
-                            margin: 0 0 0 30px;
-                        }
-                        .icon {
-                            position: absolute;
-                            font-size: 23px;
-                        }
-                    }
-                }
-            }
-            .hyper-link {
-                margin-bottom: 10px;
-
-                .icon {
-                    padding: 10px 9px 8px 9px;
-                    text-decoration: none;
-                    text-align: center;
-                    cursor: pointer;
-                    color: white;
-                    margin: 10px 8px 0 8px;
-                    border-radius: 50%;
-                    width: 20px;
-                    height: 20px;
-                    transition: .3s;
-                    box-shadow: 0 2px 5px rgb(87, 87, 87);
-
-                    &:hover {
-                        box-shadow: 0 2px 5px rgb(75, 75, 75);
-                        transform: translateY(-5px);
-                    }
-                }
-                .fa-facebook {
-                    background-color: #3b5998;
-                }
-                .fa-twitter {
-                    background-color: #55acee;
-                }
-                .fa-google {
-                    background-color: #dd4b39;
-                }
-                .fa-linkedin {
-                    background-color: #007bb5;
-                }
-                .fa-rss {
-                    background-color: #ff6600;
-                }
-            }
-        }   
+    @include Responsive(M) {
+      width: 80%;
+      margin: 0 auto;
     }
+    @include Responsive(S) {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto;
+    }
+    .avatar {
+      z-index: 1;
+      position: relative;
+      margin: 0;
+      background-size: cover;
+
+      @include Responsive(S) {
+        width: 130px;
+        margin: -70px auto 0;
+      }
+
+      .cross {
+        position: absolute;
+        background-color: transparent;
+        border-bottom: 401px solid #06a763;
+        border-right: 100px solid transparent;
+        width: 0px;
+        height: 0px;
+        left: -1px;
+
+        @include Responsive(S) {
+          display: none;
+        }
+      }
+      .avatar-img {
+        @include Responsive(S) {
+          border-radius: 50%;
+        }
+      }
+      .plus-btn {
+        z-index: 3;
+        position: absolute;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: #1976d2;
+        border-radius: 50%;
+        top: 85px;
+        margin: auto 0;
+        box-shadow: 0 0 7px rgb(61, 61, 61);
+        cursor: pointer;
+        transition: 0.5s;
+
+        @include Responsive(S) {
+          display: none;
+        }
+
+        &:hover {
+          box-shadow: 0 0 14px rgb(61, 61, 61);
+        }
+        .icon {
+          font-size: 40px;
+          color: white;
+        }
+      }
+    }
+    .info {
+      padding: 50px 45px;
+
+      @include Responsive(S) {
+        text-align: center;
+        align-items: center;
+        width: auto;
+        padding: 0 0 10px 0;
+      }
+      .info-header {
+        .name {
+          color: white;
+          margin: 5px 0 0 0;
+          font-size: 30px;
+          text-shadow: 2px 2px 5px rgb(97, 97, 97);
+          letter-spacing: 0px;
+        }
+        .job {
+          color: white;
+          margin: 0;
+          font-size: 20px;
+          font-weight: 400;
+          text-shadow: 2px 2px 5px rgb(97, 97, 97);
+        }
+      }
+      .info-body {
+        width: fit-content;
+
+        @include Responsive(S) {
+          margin: 0 auto;
+        }
+        .contact {
+          margin-top: 30px;
+          padding: 0;
+          list-style-type: none;
+          text-align: left;
+
+          .contact-row {
+            position: relative;
+            color: white;
+            margin: 10px 0;
+            font-weight: 500;
+
+            .contact-data {
+              font-size: 15px;
+              margin: 0 0 0 30px;
+            }
+            .icon {
+              position: absolute;
+              font-size: 23px;
+            }
+          }
+        }
+      }
+      .hyper-link {
+        margin-bottom: 10px;
+
+        .icon {
+          padding: 10px 9px 8px 9px;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+          color: white;
+          margin: 10px 8px 0 8px;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          transition: 0.3s;
+          box-shadow: 0 2px 5px rgb(87, 87, 87);
+
+          &:hover {
+            box-shadow: 0 2px 5px rgb(75, 75, 75);
+            transform: translateY(-5px);
+          }
+        }
+        .fa-facebook {
+          background-color: #3b5998;
+        }
+        .fa-twitter {
+          background-color: #55acee;
+        }
+        .fa-google {
+          background-color: #dd4b39;
+        }
+        .fa-linkedin {
+          background-color: #007bb5;
+        }
+        .fa-rss {
+          background-color: #ff6600;
+        }
+      }
+    }
+  }
 }
