@@ -53,9 +53,6 @@
       .img {
         filter: contrast(0.8);
         transition: all 0.5s;
-        &.fadeIn {
-          transform: scale(1);
-        }
       }
       .caption {
         position: absolute;

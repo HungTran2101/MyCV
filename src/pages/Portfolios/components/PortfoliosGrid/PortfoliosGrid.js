@@ -71,9 +71,6 @@ function PortfoliosGrid({ option, viewAll, gridData }) {
     return "";
   };
 
-  const items = []
-  
-
   return (
     <div className="portfoliosGrid">
       {gridData &&

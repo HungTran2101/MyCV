@@ -531,10 +531,15 @@ export const blogData = [
     title: "material design",
     content: `Web design encompasses many different skills and disciplines in the production 
                 of websites.Web design include web graphic design, interface design etc.`,
+    breadcrumb: [
+      { name: "Frontend", isLink: true },
+      { name: "Design", isLink: true },
+      { name: "Material", isLink: false },
+    ],
     img: {
       src: blogImg1,
       caption: {
-        author: "Thanh Tran",
+        author: "Nhat Hung",
         time: "May 05 2018",
         cmt: 98,
       },
@@ -545,10 +550,15 @@ export const blogData = [
     title: "development shortcut",
     content: `Web development is a broad term for the work involved in developing a web site 
                 for the Internet or an intranet. Now lets get a bit deeper in this topic`,
+    breadcrumb: [
+      { name: "Backend", isLink: true },
+      { name: "Dev", isLink: true },
+      { name: "Shortcuts", isLink: false },
+    ],
     img: {
       src: blogImg2,
       caption: {
-        author: "Thanh Tran",
+        author: "Nhat Hung",
         time: "May 05 2018",
         cmt: 98,
       },
@@ -557,12 +567,17 @@ export const blogData = [
   },
   {
     title: "a good ui",
-    content: `The user interface (UI), in the industrial design field of human–machine interaction, 
+    content: `The user interface (UI), in the industrial design field of human-machine interaction, 
                 is the space where interactions between humans and machines occur.`,
+    breadcrumb: [
+      { name: "Frontend", isLink: true },
+      { name: "Specs", isLink: true },
+      { name: "UI", isLink: false },
+    ],
     img: {
       src: blogImg3,
       caption: {
-        author: "Thanh Tran",
+        author: "Nhat Hung",
         time: "May 05 2018",
         cmt: 98,
       },
