@@ -8,7 +8,7 @@ $base-color: #06a763;
   margin-top: 80px;
 
   @include Responsive(M) {
-    width: 90%;
+    width: 80%;
   }
   @include Responsive(S) {
     margin-top: 10px;
