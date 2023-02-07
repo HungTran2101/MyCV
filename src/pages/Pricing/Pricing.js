@@ -4,7 +4,7 @@ import { pricingData } from "../../utils/UserData";
 
 function Pricing() {
   return (
-    <div className="pricing section animate fadeUp medium">
+    <div id="pricing" className="pricing section animate fadeUp medium">
       <div className="container">
         <SectionTitle title="pricing" />
         <div className="pricingWrapper">

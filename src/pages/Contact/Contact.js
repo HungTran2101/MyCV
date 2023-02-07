@@ -13,7 +13,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact section animate fadeUp medium">
+    <div id="contact" className="contact section animate fadeUp medium">
       <div className="container">
         <SectionTitle title="contact" />
         <div className="contactWrapper">

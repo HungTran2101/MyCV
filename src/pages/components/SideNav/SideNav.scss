@@ -78,7 +78,7 @@
     }
     .change.line1 {
         -webkit-transform: rotate(-45deg) translate(-5px, 4px);
-        transform: rotate(-47deg) translate(-4px, 4px);
+        transform: rotate(-45deg) translate(-5px, 4px);
     }
 
     .change.line2 {
@@ -86,7 +86,7 @@
     }
 
     .change.line3 {
-        -webkit-transform: rotate(45deg) translate(-4px, -4px);
-        transform: rotate(46deg) translate(-5px, -6px);
+        -webkit-transform: rotate(45deg) translate(-4px, -5px);
+        transform: rotate(45deg) translate(-6px, -5px);
     }
 }
