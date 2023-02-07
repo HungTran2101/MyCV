@@ -1,4 +1,4 @@
-import avatarImg from "../assets/images/ava-user1.jpg";
+import avatarImg from "../assets/images/ava-user2.jpg";
 import educationImg1 from "../assets/images/demo-gra.jpg";
 import portfoliosImgB1 from "../assets/images/big-1.jpg";
 import portfoliosImg1 from "../assets/images/portfolio-1.jpg";
@@ -24,7 +24,7 @@ import blogImg3 from "../assets/images/blog-3.png";
 
 export const userInfo = {
   name: "Tran Nhat Hung",
-  job: "Software Engineer & FE/BE Developer",
+  job: "Software Engineer & FE Developer",
   email: "trannhathung2101@gmail.com",
   website: " hungwebsite.com",
   skype: "trannhathung2101@gmail.com",
@@ -74,11 +74,11 @@ export const navLinks = [
     href: "#testimonials",
     classIconFA: "fa fa-users",
   },
-  // {
-  //     title: 'Pricing',
-  //     href: '#pricing',
-  //     classIconFA: 'fa fa-money'
-  // },
+  {
+    title: "Pricing",
+    href: "#pricing",
+    classIconFA: "fa fa-money",
+  },
   {
     title: "Blog",
     href: "#blog",
@@ -92,7 +92,7 @@ export const navLinks = [
 ];
 
 export const aboutData = {
-  description: `Hello! I'm Hung Tran. Senior Web Developer with over 1 years of experience specializing in front end development. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including advanced HTML5, CSS, CSS3, SCSS, SASS, JSON, XML, Java, JS, ReactJS. Strong background in management and leadership.`,
+  description: `Hello! I'm Hung Tran. Fresher Web Developer with 1 years of experience specializing in front end development. Experienced with all stages of the development cycle for dynamic web projects. Having an in-depth knowledge including HTML5, CSS3, SCSS, SASS, JSON, JS, ReactJS, MERN, Redux, NextJS. Willingly to learn more about Frontend Development.`,
 };
 
 export const educationData = [

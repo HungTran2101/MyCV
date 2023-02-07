@@ -4,7 +4,7 @@ import { blogData } from "../../utils/UserData";
 
 function Blog() {
   return (
-    <div className="blog section animate fadeUp medium">
+    <div id="blog" className="blog section animate fadeUp medium">
       <div className="container">
         <SectionTitle title="blog" />
         <div className="blogWrapper">
@@ -36,7 +36,7 @@ function Blog() {
                 </div>
                 <div className="title">{data.title}</div>
                 <div className="content">{data.content}</div>
-                <a className="readmore" href="/">
+                <a className="readmore" href="#blog">
                   Read More
                 </a>
               </div>
